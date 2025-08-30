@@ -1,12 +1,12 @@
 import streamDeck, { LogLevel } from "@elgato/streamdeck";
 
-import { IncrementCounter } from "./actions/increment-counter";
+import { InsertTimestamp } from "./actions/insert-timestamp";
 
-// We can enable "trace" logging so that all messages between the Stream Deck, and the plugin are recorded. When storing sensitive information
+// We can enable "trace" logging so that all messages between the Stream Deck, and the plugin are recorded. (for sensitive information)
 streamDeck.logger.setLevel(LogLevel.TRACE);
 
-// Register the increment action.
-streamDeck.actions.registerAction(new IncrementCounter());
+// Register the InsertTimestamp() action so that it can be instantiated by the Stream Deck application.
+streamDeck.actions.registerAction(new InsertTimestamp());
 
 // Finally, connect to the Stream Deck.
 streamDeck.connect();

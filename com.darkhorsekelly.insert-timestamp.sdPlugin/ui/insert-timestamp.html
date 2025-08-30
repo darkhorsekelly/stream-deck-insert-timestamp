@@ -4,16 +4,20 @@
 <head lang="en">
     <title>Insert Timestamp Settings</title>
     <meta charset="utf-8" />
-    <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+    <script src="sdpi-components.js"></script>
 </head>
 
-<body>
-    <!--
-        Learn more about property inspector components at https://sdpi-components.dev/docs/components
-    -->
-    <sdpi-item label="Increment By">
-        <sdpi-range setting="incrementBy" min="1" max="5" step="1" default="1" showlabels></sdpi-range>
-    </sdpi-item>
+<body>    
+    <sdpi-item label="Timestamp Format">
+        <sdpi-select setting="format" value="short">
+            <option value="short">Short Date (12/25/2023)</option>
+            <option value="long">Full Date & Time</option>
+            <option value="time">Time Only (3:30 PM)</option>
+            <option value="iso">ISO Format</option>
+            <!-- Need an option for the following: 2025-08-29 19:47:32 -->
+            <option value="custom">YYYY-MM-DD HH-MM-SS</option>
+        </sdpi-select>
+    </sdpi-item>8/29/2025
 </body>
 
 </html>
